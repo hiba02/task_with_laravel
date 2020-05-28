@@ -11,13 +11,23 @@
 |
 */
 
+// Route::get('/', function () {
+//     $books = [
+//         'Harry potter',
+//         'Laravel'
+//     ];
+//     return view('welcome', ['books' => $books]);
+// });
+
 Route::get('/', function () {
     $books = [
         'Harry potter',
-        'Laravel'
+        'Laravel',
+        'PHP',
     ];
-    return view('welcome', ['books' => $books]);
-});
+    return view('welcome')->with(['books'=>$books]);
+}); //why do 'books' assign as a key, not $books?
+// it should be match 'books' with '$books'
 
 Route::get('/hello', function () {
     return view('hello');
