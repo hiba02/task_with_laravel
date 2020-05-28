@@ -19,21 +19,8 @@
 //     return view('welcome', ['books' => $books]);
 // });
 
-Route::get('/', function () {
-    $books = [
-        'Harry potter',
-        'Laravel',
-        'PHP',
-    ];
-    // return view('welcome')->with(['books'=>$books]);
-    return view('welcome')->withBooks($books);
-}); //why do 'books' assign as a key, not $books?
-// it should be match 'books' with '$books'
+Route::get('/', 'HomeController@index');
 
-Route::get('/hello', function () {
-    return view('hello');
-});
+Route::get('/hello', 'HomeController@hello');
 
-Route::get('/contact', function() {
-    return view('contact');
-});
+Route::get('/contact', 'HomeController@contact');
