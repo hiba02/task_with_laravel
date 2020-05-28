@@ -12,7 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $books = [
+        'Harry potter',
+        'Laravel'
+    ];
+    return view('welcome', ['books' => $books]);
 });
 
 Route::get('/hello', function () {
