@@ -25,7 +25,8 @@ Route::get('/', function () {
         'Laravel',
         'PHP',
     ];
-    return view('welcome')->with(['books'=>$books]);
+    // return view('welcome')->with(['books'=>$books]);
+    return view('welcome')->withBooks($books);
 }); //why do 'books' assign as a key, not $books?
 // it should be match 'books' with '$books'
 
