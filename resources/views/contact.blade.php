@@ -1,13 +1,9 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+@extends('layout')
 
-        <title>Laravel</title>
+@section('title')
+    Contact
+@endsection
 
-    </head>
-    <body>
-      <h2>Contact</h2>
-    </body>
-</html>
+@section('content')
+    Contact
+@endsection
